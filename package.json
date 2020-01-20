@@ -1,41 +1,46 @@
 {
   "name": "Planner-App",
-  "version": "1.0.0",
-  "description": "",
-  "main": "server.js",
-  "engines": {
-    "node": "10.16.3"
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.3.2",
+    "@testing-library/user-event": "^7.1.2",
+    "axios": "^0.19.1",
+    "boots": "^0.3.0",
+    "bootstrap": "^4.4.1",
+    "dotenv": "^8.2.0",
+    "http-proxy-middleware": "^0.20.0",
+    "materialize-css": "^1.0.0-rc.2",
+    "react": "^16.12.0",
+    "react-bootstrap": "^1.0.0-beta.16",
+    "react-dom": "^16.12.0",
+    "react-icons": "^3.8.0",
+    "react-router-dom": "^5.1.2",
+    "react-scripts": "3.3.0",
+    "react-simple-storage": "^1.4.1"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js",
-    "start:prod": "node server.js",
-    "start:dev": "concurrently \"nodemon --ignore 'Client/*'\" \"npm run Client\"",
-    "client": "cd Client && npm run start",
-    "install": "cd Client && npm install",
-    "build": "cd Client && npm install && npm run build",
-    "heroku-postbuild": "npm run build",
-    "deploy": "npm run clean && npm run build && serve -s build",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "clean": "rm -rf build",
     "rerun": "npm run clean && npm run build && serve -s build"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/sharmap1/Planner-App.git"
+  "eslintConfig": {
+    "extends": "react-app"
   },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/sharmap1/Planner-App/issues"
-  },
-  "homepage": "https://github.com/sharmap1/Planner-App#readme",
-  "dependencies": {
-    "concurrently": "^5.0.2",
-    "cors": "^2.8.5",
-    "dotenv": "^8.2.0",
-    "express": "^4.17.1",
-    "if-env": "^1.0.4",
-    "mongoose": "^5.8.7",
-    "nodemon": "^2.0.2",
-    "react-beautiful-dnd": "^12.2.0"
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }
