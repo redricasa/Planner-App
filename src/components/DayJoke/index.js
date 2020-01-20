@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Card, Col } from "react-bootstrap";
-import { set } from "mongoose";
+
 
 const DayJoke = () => {
   const [joke, setJoke] = useState("");
