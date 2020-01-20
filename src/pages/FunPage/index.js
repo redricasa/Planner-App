@@ -113,50 +113,24 @@ function FunPage() {
   };
 
   return (
-    <>
-      <main className="App">
-        <Container fluid>
-          <Row>
-            <Col md="3">
-              <DayQuote />
-            </Col>
-            <Col md="3">
-              <DayJoke />
-            </Col>
-            <Col md="3">
-              <DayPic />
-            </Col>
-            <Col md="3">
-              <DayWeather />
-            </Col>
-
-            {/* <Col md="8">
-              <Card.Body className="sub-card">
-                <Card.Header as="h5">My TODO</Card.Header>
-                <Card.Body>
-                  <TaskForm
-                    todo={todo}
-                    handleTodo={handleTodo}
-                    handleSubmit={handleSubmit}
-                    edit={edit}
-                  />
-                  <Alert />
-                  {alert.show && <Alert type={alert.type} text={alert.text} />}
-                  <Card.Body> </Card.Body>
-
-                  <TaskList
-                    tasks={tasks[month]}
-                    handleDelete={handleDelete}
-                    handleEdit={handleEdit}
-                    clearItems={clearItems}
-                  />
-                </Card.Body>
-              </Card.Body>
-            </Col> */}
-          </Row>
-        </Container>
-      </main>
-    </>
+    <main className="App">
+      <Container fluid>
+        <Row>
+          <Col md="3">
+            <DayQuote />
+          </Col>
+          <Col md="3">
+            <DayJoke />
+          </Col>
+          <Col md="3">
+            <DayPic />
+          </Col>
+          <Col md="3">
+            <DayWeather />
+          </Col>
+        </Row>
+      </Container>
+    </main>
   );
 }
 
