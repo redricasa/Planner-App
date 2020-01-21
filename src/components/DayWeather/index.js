@@ -9,13 +9,13 @@ const DayWeather = () => {
   const [weather, setWeather] = useState("");
   useEffect(() => {
     const fetchData = async () => {
+      console.log("key", process.env.REACT_APP_WEATHER_KEY);
       const result = await axios(
-        "https://api.openweathermap.org/data/2.5/weather?q=Seattle,Washington&units=" +
-          process.env.WEATHER_KEY
+        "https://api.openweathermap.org/data/2.5/weather?q=Seattle,Washington&units=imperial&appid=" +
+          process.env.REACT_APP_WEATHER_KEY
       );
       console.log("result", result.data);
       setWeather(`${result.data.weather["0"].main}, ${result.data.main.temp}`);
-      // setMaxmin(`${result.data.main.temp_max}, ${result.data.main.temp_min}`);
     };
     fetchData();
   }, []);
@@ -29,20 +29,15 @@ const DayWeather = () => {
           src="https://cdn.dribbble.com/users/1761137/screenshots/3665783/dribbble.gif"
         />
         <Card.Header as="h5">My Weather</Card.Header>
-
         <p>
           <Wheader />
           <p style={{ margin: "20px", fontSize: "15px", fontWeight: "bold" }}>
             {weather}
             <WiFahrenheit className="weather-btn" />
           </p>
-          {/* Latest update and information on weather */}
         </p>
-        
       </Card.Body>
     </Col>
   );
 };
 export default DayWeather;
-
-
