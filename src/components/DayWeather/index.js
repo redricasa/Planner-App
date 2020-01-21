@@ -21,32 +21,28 @@ const DayWeather = () => {
   }, []);
 
   return (
-    <>
-      {/* <Col md={{ span: 3, offset: 0 }}> */}
-      <Col md="12">
-        <Card.Body className="weather-card">
-          <Card.Img
-            className="card-img"
-            variant="top"
-            src="https://cdn.dribbble.com/users/1761137/screenshots/3665783/dribbble.gif"
-          />
-          {/* <WiDaySunny className="card-img"/> */}
-          <Card.Header as="h5">My Weather</Card.Header>
+    <Col md="12">
+      <Card.Body className="weather-card">
+        <Card.Img
+          className="card-img"
+          variant="top"
+          src="https://cdn.dribbble.com/users/1761137/screenshots/3665783/dribbble.gif"
+        />
+        <Card.Header as="h5">My Weather</Card.Header>
 
-          <p>
-            <Wheader />
-            <p style={{ margin: "20px", fontSize: "15px", fontWeight: "bold" }}>
-              {weather}
-              <WiFahrenheit className="weather-btn" />
-            </p>
-            {/* Latest update and information on weather */}
+        <p>
+          <Wheader />
+          <p style={{ margin: "20px", fontSize: "15px", fontWeight: "bold" }}>
+            {weather}
+            <WiFahrenheit className="weather-btn" />
           </p>
-          {/* </Card.Header> */}
-        </Card.Body>
-      </Col>
-    </>
+          {/* Latest update and information on weather */}
+        </p>
+        
+      </Card.Body>
+    </Col>
   );
 };
 export default DayWeather;
 
-//https://media.giphy.com/media/I41PoTyPnHuMM/giphy.gif
+
