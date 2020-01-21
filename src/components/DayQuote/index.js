@@ -19,8 +19,7 @@ const DayQuote = () => {
   }, [fetching]);
 
   return (
-    <>
-      {/* <Col md={{ span: 3, offset: 0 }}> */}
+    <React.Fragment>
       <Col md="12">
         <Card.Body className="quote-card">
           <Card.Img
@@ -40,7 +39,7 @@ const DayQuote = () => {
           </button>
         </Card.Body>
       </Col>
-    </>
+    </React.Fragment>
   );
 };
 export default DayQuote;

@@ -35,7 +35,3 @@ const DayPic = () => {
 };
 export default DayPic;
 
-// var queryURL =
-//   "https://api.giphy.com/v1/gifs/search?q=" +
-//   animal +
-//   "&api_key=BkaUZZWcFij6J7AoQj3WtPb1R2p9O6V9&limit=10";
