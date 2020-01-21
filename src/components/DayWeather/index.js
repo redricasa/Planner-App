@@ -21,23 +21,26 @@ const DayWeather = () => {
   }, []);
 
   return (
-    <Col md="12">
-      <Card.Body className="weather-card">
-        <Card.Img
-          className="card-img"
-          variant="top"
-          src="https://cdn.dribbble.com/users/1761137/screenshots/3665783/dribbble.gif"
-        />
-        <Card.Header as="h5">My Weather</Card.Header>
-        <p>
-          <Wheader />
-          <p style={{ margin: "20px", fontSize: "15px", fontWeight: "bold" }}>
-            {weather}
-            <WiFahrenheit className="weather-btn" />
+    <>
+      <Col md="12">
+        <Card.Body className="weather-card">
+          <Card.Img
+            className="card-img"
+            variant="top"
+            src="https://cdn.dribbble.com/users/1761137/screenshots/3665783/dribbble.gif"
+          />
+          <Card.Header as="h5">My Weather</Card.Header>
+
+          <p>
+            <Wheader />
+            <p style={{ margin: "20px", fontSize: "15px", fontWeight: "bold" }}>
+              {weather}
+              <WiFahrenheit className="weather-btn" />
+            </p>
           </p>
-        </p>
-      </Card.Body>
-    </Col>
+        </Card.Body>
+      </Col>
+    </>
   );
 };
 export default DayWeather;

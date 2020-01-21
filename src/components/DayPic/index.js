@@ -4,7 +4,6 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { Card, Col } from "react-bootstrap";
 
 const DayPic = () => {
-  
   const [giphy, setImage] = useState("");
   const [fetching, setFetching] = useState("false");
   useEffect(() => {
@@ -14,8 +13,7 @@ const DayPic = () => {
           process.env.REACT_APP_GIPHY_KEY +
           "&limit=1000"
       );
-      // console.log("key", process.env.GIPHY_KEY);
-
+      
       let random = Math.floor(Math.random() * 1000);
 
       setImage(`${result.data.data[random].images.downsized_large.url}`);
@@ -24,8 +22,7 @@ const DayPic = () => {
   }, [fetching]);
 
   return (
-    <>
-      {/* <Col md={{ span: 3, offset: 0 }}> */}
+    <React.Fragment>    
       <Col md="12">
         <Card.Body className="pic-card">
           <Card.Img className="card-img" variant="top" src={giphy} />
@@ -39,7 +36,7 @@ const DayPic = () => {
           </button>
         </Card.Body>
       </Col>
-    </>
+    </React.Fragment>
   );
 };
 export default DayPic;
