@@ -2,7 +2,7 @@ import React, { useState, Component } from "react";
 // import TaskList from "../../components/TaskList";
 // import TaskForm from "../../components/TaskForm";
 // import Alert from "../../components/Alert";
-// import App from "../../App.css";
+import App from "../../App.css";
 import uuid from "uuid/v4";
 import "bootstrap/dist/css/bootstrap.min.css";
 // import Nav from "../../components/Nav";
